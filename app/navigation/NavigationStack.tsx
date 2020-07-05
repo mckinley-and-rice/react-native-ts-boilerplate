@@ -9,9 +9,36 @@ import Login from 'app/screens/Login';
 import Home from 'app/screens/Home';
 import ThemeController from '../components/ThemeController';
 import { StatusBar } from 'react-native';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Stack = createStackNavigator();
+const BottomNavigation = createMaterialBottomTabNavigator();
 
+function BottomNavigationContainer() {
+  return (
+    <BottomNavigation.Navigator>
+      <BottomNavigation.Screen name="Home" component={Home} options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="home" color={color} size={26} />
+          ),
+        }}/>
+      <BottomNavigation.Screen name="HomeCopy" component={Home} options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="home" color={color} size={26} />
+          ),
+        }}/>
+      <BottomNavigation.Screen name="HomeCopy2" component={Home} options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="home" color={color} size={26} />
+          ),
+        }}/>
+    </BottomNavigation.Navigator>
+  );
+}
 const homeOptions = {
   title: 'Home',
   headerTitleStyle: {
@@ -30,7 +57,7 @@ function App(props) {
 
       <Stack.Navigator>
         {isLoggedIn ? (
-          <Stack.Screen name="Home" component={Home} options={homeOptions} />
+          <Stack.Screen name="Home" component={BottomNavigationContainer} options={homeOptions} />
         ) : (
           <Stack.Screen
             name="Login"
