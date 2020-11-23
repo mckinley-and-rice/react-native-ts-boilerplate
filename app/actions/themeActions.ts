@@ -3,7 +3,7 @@
  */
 import * as types from './types';
 
-export function setIsDarkTheme(value) {
+export function setIsDarkTheme(value: any) {
   return {
     type: types.TOGGLE_THEME,
     isDark: value,

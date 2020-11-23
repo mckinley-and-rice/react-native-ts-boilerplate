@@ -1,4 +1,4 @@
-#Sat Jul 04 12:37:07 IST 2020
-base.0=/Users/kumargaurav/Documents/my-repo/cam scanner/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Sun Nov 22 20:47:49 IST 2020
+base.0=/Users/kumargaurav/Documents/my-repo/react-native-redux-saga/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

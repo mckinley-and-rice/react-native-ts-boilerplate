@@ -2,22 +2,22 @@
  * React Native App
  * Everything starts from the entrypoint
  */
-import React from 'react';
-import { ActivityIndicator } from 'react-native';
-import { Provider, useSelector } from 'react-redux';
-import { PersistGate } from 'redux-persist/es/integration/react';
+import React from "react";
+import { ActivityIndicator } from "react-native";
+import { Provider, useSelector } from "react-redux";
+import { PersistGate } from "redux-persist/es/integration/react";
 import {
   DarkTheme as PaperDarkTheme,
   DefaultTheme as PaperDefaultTheme,
   Provider as PaperProvider,
-} from 'react-native-paper';
+} from "react-native-paper";
 import {
   DefaultTheme as NavigationDefaultTheme,
   DarkTheme as NavigationDarkTheme,
-} from '@react-navigation/native';
+} from "@react-navigation/native";
 
-import Navigator from 'app/navigation';
-import configureStore from 'app/store/configureStore';
+import Navigator from "./navigation";
+import configureStore from "./store/configureStore";
 
 const CombinedDefaultTheme = {
   ...PaperDefaultTheme,
@@ -31,10 +31,12 @@ const CombinedDarkTheme = {
 const { persistor, store } = configureStore();
 
 export function RootNavigation() {
-  const isDark = useSelector(state => state.themeReducer.isDark);
+  //@ts-ignore
+  const isDark = useSelector((state) => state.themeReducer.isDark);
   const theme = isDark ? CombinedDarkTheme : CombinedDefaultTheme;
 
   return (
+    //@ts-ignore
     <PaperProvider theme={theme}>
       <Navigator theme={theme} />
     </PaperProvider>

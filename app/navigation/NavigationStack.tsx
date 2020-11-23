@@ -5,8 +5,8 @@ import { useSelector } from 'react-redux';
 
 import { navigationRef } from './NavigationService';
 
-import Login from 'app/screens/Login';
-import Home from 'app/screens/Home';
+import Login from '../screens/Login';
+import Home from '../screens/Home';
 import ThemeController from '../components/ThemeController';
 import { StatusBar } from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
@@ -47,11 +47,13 @@ const homeOptions = {
   headerRight: () => <ThemeController />,
 };
 
-function App(props) {
+function App(props: any) {
   const { theme } = props;
+  //@ts-ignore
   const isLoggedIn = useSelector(state => state.loginReducer.isLoggedIn);
 
   return (
+    //@ts-ignore
     <NavigationContainer ref={navigationRef} theme={theme}>
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
 

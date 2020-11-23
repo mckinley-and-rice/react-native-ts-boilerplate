@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { Button } from 'react-native-paper';
 
 import { useDispatch } from 'react-redux';
-import * as loginActions from 'app/actions/loginActions';
+import * as loginActions from '../../actions/loginActions';
 import styles from './styles';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <Button icon="logout" mode="outlined" onPress={onLogout}>
+      <Button icon="logout" mode="outlined" onPress={onLogout} accessibilityStates="testButton">
         Logout
       </Button>
     </View>

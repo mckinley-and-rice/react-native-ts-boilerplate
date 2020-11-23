@@ -1,6 +1,6 @@
 // General api to access data
 import ApiConstants from './ApiConstants';
-export default function api(path, params, method, token) {
+export default function api(path: any, params: any, method: any, token: any) {
   let options;
   options = {
     headers: {

@@ -3,7 +3,7 @@
  */
 import * as types from './types';
 
-export function requestLogin(username, password) {
+export function requestLogin(username: string, password: string) {
   return {
     type: types.LOGIN_REQUEST,
     username,
@@ -17,7 +17,7 @@ export function loginFailed() {
   };
 }
 
-export function onLoginResponse(response) {
+export function onLoginResponse(response: any) {
   return {
     type: types.LOGIN_RESPONSE,
     response,

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/kumargaurav/Documents/my-repo/cam scanner/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml",
+            "outputFile": "/Users/kumargaurav/Documents/my-repo/react-native-redux-saga/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml",
             "map": [
                 {
                     "source": "/Users/kumargaurav/.gradle/caches/transforms-2/files-2.1/4f509a65121478d6153615d7ef5b7c5f/core-1.1.0/res/values-sl/values-sl.xml",

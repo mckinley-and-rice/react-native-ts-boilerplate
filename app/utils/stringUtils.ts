@@ -1,3 +1,4 @@
+//@ts-ignore
 export const getInitials = name => {
   let initials = Array.prototype.map
     .call(name.split(' '), function(x) {
