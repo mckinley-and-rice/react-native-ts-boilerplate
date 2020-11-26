@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Button } from 'react-native-paper';
+import Button from '../../components/UiComponents/Button/Button';
 
 import { useDispatch } from 'react-redux';
 import * as loginActions from 'app/store/actions/loginActions';
@@ -11,9 +11,10 @@ const Home: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Button icon="logout" mode="outlined" onPress={onLogout}>
-        Logout
-      </Button>
+      <Button
+        onPress={onLogout}
+        buttonText={'logout'}
+      />
     </View>
   );
 };

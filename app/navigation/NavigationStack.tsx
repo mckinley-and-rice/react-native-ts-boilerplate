@@ -9,7 +9,7 @@ import Login from 'app/screens/Login';
 import Home from 'app/screens/Home';
 import ForgotPassword from 'app/screens/ForgotPassword';
 
-import ThemeController from '../components/ThemeController';
+import ThemeController from '../components/ThemeController/ThemeController';
 import { StatusBar } from 'react-native';
 import { ILoginState } from 'app/models/reducers/login';
 
@@ -87,17 +87,17 @@ const App: React.FC<IProps> = (props: IProps) => {
             options={homeOptions}
           />
         ) : (
-          <Stack.Screen
-            name="Login"
-            component={AuthNavigator}
-            options={{
-              // When logging out, a pop animation feels intuitive
-              // You can remove this if you want the default 'push' animation
-              animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
-              headerRight: () => <ThemeController />,
-            }}
-          />
-        )}
+            <Stack.Screen
+              name="Login"
+              component={AuthNavigator}
+              options={{
+                // When logging out, a pop animation feels intuitive
+                // You can remove this if you want the default 'push' animation
+                animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
+                headerRight: () => <ThemeController />,
+              }}
+            />
+          )}
       </Stack.Navigator>
     </NavigationContainer>
   );
