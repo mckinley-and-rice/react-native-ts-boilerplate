@@ -1,7 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import { persistStore, persistCombineReducers } from 'redux-persist';
 import AsyncStorage from '@react-native-community/async-storage';
-import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 
 import rootReducers from 'app/store/reducers'; // where reducers is a object of reducers
@@ -20,7 +19,8 @@ const sagaMiddleware = createSagaMiddleware();
 middleware.push(sagaMiddleware);
 
 if (__DEV__) {
-  middleware.push(createLogger());
+  const createDebugger = require('redux-flipper').default;
+  middleware.push(createDebugger());
 }
 
 const reducers = persistCombineReducers(config, rootReducers);
