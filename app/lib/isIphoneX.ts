@@ -12,11 +12,3 @@ export function isIphoneX() {
     (dimen.height === 812 || dimen.width === 812)
   );
 }
-
-export function ifIphoneX(iphoneXStyle: any, regularStyle: any) {
-  if (isIphoneX()) {
-    return iphoneXStyle;
-  } else {
-    return regularStyle;
-  }
-}
