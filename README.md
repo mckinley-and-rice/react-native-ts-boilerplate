@@ -1,4 +1,4 @@
-# 🚀 React Native Boilerplate - September 2020
+# 🚀 React Native Boilerplate - November 2020
 
 [![React Native](https://img.shields.io/badge/React%20Native-v0.63.2-green.svg)](https://facebook.github.io/react-native/)
 [![React Navigation V5](https://img.shields.io/badge/React%20Navigation-v5.9-blue.svg)](https://reactnavigation.org/)
@@ -45,7 +45,8 @@ This Type based Architecture scales smoothly for small - medium apps. If you guy
   <img height="720" src="https://user-images.githubusercontent.com/15869386/84810277-c051fb00-b028-11ea-9351-cbb586ae4fc2.gif" />
   
 ## Prerequisites
-
+Install flipper-plugin-redux-debugger in Flipper desktop client: https://github.com/jk-gan/flipper-plugin-redux-debugger
+Manage Plugins > Install Plugins > search "redux-debugger" > Install
 - [Node](https://nodejs.org) v10 (it is recommended to install it via [NVM](https://github.com/creationix/nvm))
 - [Yarn](https://yarnpkg.com/)
 - A development machine set up for React Native by following [these instructions](https://facebook.github.io/react-native/docs/getting-started.html)
